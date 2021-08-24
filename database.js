@@ -1,9 +1,10 @@
 var mysql = require('mysql');
+const config = require("./config/key");
 var conn = mysql.createConnection({
-    host     : 'mun3924.cafe24.com',  
-    user     : 'mun3924',  
-    password : 'anstn3924',  
-    database : 'mun3924' 
+    host     : config.host,  
+    user     : config.user,  
+    password : config.password,  
+    database : config.database, 
 }); 
 
 conn.connect((err) => {

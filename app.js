@@ -12,9 +12,7 @@ var usersRouter = require('./routes/users');
 // view engine setup
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
 app.set('views', path.join(__dirname, 'views'));
-
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -23,11 +21,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const port = process.env.PORT || 5000;
 
-//listen이 port를 시작하는 코드인데
-//너 코드에서 listen이 없었어.
-app.listen(5000, () => {
-  console.log("using 5000");
+app.listen(port, () => {
+  console.log("using " + port);
 })
 
 /*
