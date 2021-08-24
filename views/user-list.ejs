@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mornitoring/title>
+  <base href="/">
+</head>
+<body>
+    <div class="table-data">
+<h2>Mornitoring</h2>
+    <table>
+        <tr>
+            <th>Num</th>
+            <th>Sensor_type</th>
+            <th>Timeline</th>
+            <th>Warning</th>
+            <th>Description</th>
+        </tr>
+        
+        <%
+        if(userData.length!=0){
+        var i=1;
+        userData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.Sensor_type %></td>
+            <td><%=data.Timeline %></td>
+            <td><%=data.Warning %></td>
+            <td><%=data.Description_ %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>
