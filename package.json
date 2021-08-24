@@ -1,12 +1,22 @@
 {
   "name": "express",
   "version": "1.0.0",
-  "homepage": ".",
   "description": "",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node" : "14.17.5",
+    "npm" : "7.21.0"
+  },
+  "keywords": [],
   "directories": {
     "lib": "lib"
   },
+  "author": "new-na",
+  "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.5",
     "create-react-app": "^1.2.1",
@@ -17,11 +27,5 @@
     "mysql": "^2.18.1",
     "nodemon": "^2.0.12",
     "sanitize-html": "^2.4.0"
-  },
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  }
 }
